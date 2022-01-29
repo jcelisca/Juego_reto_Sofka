@@ -7,8 +7,8 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class PreguntasYrespuestas {
-    public static String nombre; // se crean 3 variables públicas para almacenar el nombre del jugador, la puntuación y el número 
-    public static String score = "0";  // de la ronda. Se pueden modificar desde cualquier método
+    public static String nombre;        // se crean 3 variables públicas para almacenar el nombre del jugador, la puntuación y el número 
+    public static String score = "0";   // de la ronda. Se pueden modificar desde cualquier método
     public static int ronda = 1;
     public static File archivo;
     
@@ -16,7 +16,7 @@ public class PreguntasYrespuestas {
         
         archivo = new File("puntuacion.txt"); // se crea un archivo txt para guardar la informacion de los jugadores
         
-        nombre = JOptionPane.showInputDialog("Ingrese su nombre:");  // se le solicita al usuario el nombre
+        nombre = JOptionPane.showInputDialog("Ingrese su nombre:");            // se le solicita al usuario el nombre
         validar(BancoPreguntas.preguntass1(),BancoPreguntas.respuestass1());  // se ingresa al parámetro validar los ArrayList de las primeras preguntas con sus respuestas 
         
         if (ronda ==2){ // si el número de la ronda es 2, se aumenta el puntaje al jugador y se pasan las listas con las preguntas un poco más difíciles 
